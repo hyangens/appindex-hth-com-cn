@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hyangens.github.io/appindex-hth-com-cn/sitemap.xml
