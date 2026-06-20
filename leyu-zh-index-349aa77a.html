@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leyu · 资料整理与信息索引说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f2f3f5;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .wrap {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1f2a3a;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1rem;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 卡片网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e5e7eb;
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            border-left: 3px solid #8899b0;
+            padding-left: 0.75rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #374151;
+        }
+        .card ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+        .card li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            color: #3b4a5a;
+        }
+        .card li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #8899b0;
+            font-weight: bold;
+        }
+
+        /* 全宽卡片 */
+        .wide-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e8eaed;
+            margin: 1.5rem 0;
+        }
+        .wide-card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eef0f2;
+            padding-bottom: 0.6rem;
+        }
+        .wide-card p {
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #1f4e7a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9c8da;
+            transition: border-color 0.15s;
+        }
+        a:hover {
+            border-bottom: 1px solid #1f4e7a;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eef0f2;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+        .faq-item span {
+            font-size: 0.92rem;
+            color: #4a5a6a;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7a89;
+            border-top: 1px solid #e0e3e8;
+            padding-top: 1.8rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 680px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .wrap {
+                padding: 0 0.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- hero -->
+        <div class="hero">
+            <h1>leyu · 资料整理与索引</h1>
+            <p>一份围绕信息汇集、内容梳理与资源定位的简要说明页，从整理视角看待 <a href="https://leyu-zh.com">leyu</a> 所涵盖的材料组织方式。</p>
+        </div>
+
+        <!-- 卡片区域：亮点 + 使用建议 -->
+        <div class="grid">
+            <div class="card">
+                <h3>索引亮点</h3>
+                <ul>
+                    <li>按主题域划分资料，减少重复查找</li>
+                    <li>条目式结构，便于快速定位</li>
+                    <li>保持基础元数据（时间、来源、摘要）</li>
+                    <li>避免过度分类，维持可浏览性</li>
+                    <li>定期整合新增内容，保持索引有效</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>使用建议</h3>
+                <ul>
+                    <li>先浏览分类标题，判断是否匹配需求</li>
+                    <li>关注资料标注的更新日期</li>
+                    <li>使用页面内搜索定位关键词</li>
+                    <li>如发现链接失效，可通过站内反馈示意</li>
+                    <li>根据自身需要筛选粗粒度或细粒度条目</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 产品说明式：摘要 + 场景 -->
+        <div class="wide-card">
+            <h2>整理思路与场景</h2>
+            <p>
+                本索引面向需要从零散信息中提取脉络的使用者。不同于单纯堆叠链接，<a href="https://leyu-zh.com">leyu</a> 尝试在每个条目下附加简短注解，说明该资料的原始背景或适用范围。例如某篇技术文档标注了适用版本，某份行业报告注明数据采集时间。这种附加说明并不增加阅读负担，但在筛选时能节省反复点开确认的时间。
+            </p>
+            <p>
+                适用场景包括：日常资料回顾、主题调研前的快速摸底、团队成员之间共享参考路径。索引本身不替代深度阅读，而是提供一张可参照的“内容地图”。使用者可以依照自身节奏，选取感兴趣的区块深入。保持索引的克制——不堆砌标签，不滥用层级，让结构服务于查找效率。
+            </p>
+        </div>
+
+        <!-- 可信但克制的访问说明 -->
+        <div class="wide-card">
+            <h2>访问参考</h2>
+            <p>
+                网站 <a href="https://leyu-zh.com">leyu</a> 提供的资料索引均基于公开可获取的内容进行整理，不包含非公开或需要特殊授权才能使用的信息。索引中涉及的第三方来源均保留原始出处链接，使用者可自行验证准确性。整理者会定期核对链接有效性，但无法保证所有外部资源永久可访问。建议将重要资料自行存档备份。
+            </p>
+            <p>
+                本索引不对任何外部网站的内容负责，也不对基于索引信息做出的判断承担连带责任。使用者应根据自身判断，结合原始资料进行决策。
+            </p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="wide-card">
+            <h2>常见问题摘要</h2>
+            <div class="faq-item">
+                <strong>索引更新频率如何？</strong>
+                <span>通常每月进行一次例行检查，重要变化会及时补充。无固定发布日期。</span>
+            </div>
+            <div class="faq-item">
+                <strong>是否可以贡献条目？</strong>
+                <span>当前以整理者独立维护为主，暂未开放直接编辑。如有建议可通过站点留言说明。</span>
+            </div>
+            <div class="faq-item">
+                <strong>索引与原始资料的关系？</strong>
+                <span>索引仅提供定位与简短描述，不能替代原始资料的完整阅读。请务必访问原始出处获取完整信息。</span>
+            </div>
+            <div class="faq-item">
+                <strong>遇到链接失效怎么办？</strong>
+                <span>可尝试在站内搜索相关关键词，或联系整理者补充更新。部分历史资料可能已从原网址移除。</span>
+            </div>
+        </div>
+
+        <!-- 底部提示 -->
+        <div class="footer-note">
+            <p>资料整理与信息索引 · 基于公开内容汇编 · 2025</p>
+            <p style="margin-top: 0.3rem;">
+                更多信息请浏览 <a href="https://leyu-zh.com">leyu</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
