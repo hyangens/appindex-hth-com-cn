@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · 金年会访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background-color: #f7f7fa;
+      color: #1e1e2a;
+      line-height: 1.7;
+    }
+
+    /* ===== Hero 深色区域 ===== */
+    .hero {
+      background: linear-gradient(145deg, #0c0c14 0%, #1e1e30 100%);
+      color: #eaeef2;
+      padding: 4.5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(to top, #f7f7fa, transparent);
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 span {
+      color: #d4b48c;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #bcc4d0;
+      line-height: 1.6;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      margin-top: 2rem;
+      background: rgba(212, 180, 140, 0.15);
+      border: 1px solid #d4b48c;
+      padding: 0.35rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: #d4b48c;
+    }
+
+    /* ===== 内容容器 ===== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.8rem;
+    }
+
+    /* ===== 优势 / 简明指南 ===== */
+    .guide {
+      margin-top: -1rem;
+      padding: 3.5rem 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .guide-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.06);
+    }
+
+    .guide-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1e1e2a;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .guide-card p {
+      color: #3d3d50;
+      font-size: 0.98rem;
+    }
+
+    .guide-card .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    /* ===== 说明区（提醒与场景） ===== */
+    .reminder {
+      background: #ffffff;
+      border-radius: 28px;
+      margin: 2rem 0 2.5rem;
+      padding: 2.8rem 2.5rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+    }
+
+    .reminder h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+      border-left: 5px solid #d4b48c;
+      padding-left: 1rem;
+      color: #181826;
+    }
+
+    .reminder p {
+      margin-bottom: 1.2rem;
+      color: #2f2f42;
+    }
+
+    .reminder ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .reminder li {
+      margin-bottom: 0.65rem;
+      padding-left: 1.6rem;
+      position: relative;
+      color: #3b3b4f;
+    }
+
+    .reminder li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #b48b6e;
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .reminder strong {
+      color: #d4b48c;
+      font-weight: 500;
+    }
+
+    /* ===== FAQ 摘要 ===== */
+    .faq {
+      background: #f0f0f6;
+      border-radius: 28px;
+      padding: 2.5rem 2.5rem 2.2rem;
+      margin: 2rem 0 2.8rem;
+    }
+
+    .faq h2 {
+      font-size: 1.7rem;
+      font-weight: 500;
+      margin-bottom: 1.8rem;
+      color: #181826;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #dadae3;
+      padding: 1rem 0;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-item .question {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #1e1e30;
+    }
+
+    .faq-item .answer {
+      color: #41415a;
+      font-size: 0.95rem;
+    }
+
+    .faq-footnote {
+      margin-top: 1.6rem;
+      font-size: 0.95rem;
+      color: #4d4d63;
+      border-top: 1px dashed #cbcbdb;
+      padding-top: 1.4rem;
+    }
+
+    /* ===== 底部链接区 ===== */
+    .footer-links {
+      padding: 2rem 0 3rem;
+      text-align: center;
+      border-top: 1px solid #e3e3ed;
+    }
+
+    .footer-links p {
+      color: #5b5b6f;
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+
+    .footer-links a {
+      color: #8f6c4e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #b48b6e;
+      border-bottom-color: #b48b6e;
+    }
+
+    .inline-link {
+      color: #8f6c4e;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: #d4b48c;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .inline-link:hover {
+      color: #a77b59;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .reminder,
+      .faq {
+        padding: 1.8rem 1.5rem;
+      }
+      .guide-card {
+        padding: 1.6rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero 区 -->
+  <header class="hero">
+    <h1>简明指南 · <span>金年会</span></h1>
+    <p>从访问方式到信息确认，梳理基本要点，让每一次访问都清晰有据。</p>
+    <div class="badge">访问提醒 · 知识型参考</div>
+  </header>
+
+  <!-- 优势 / 简明指南 -->
+  <section class="guide">
+    <div class="container">
+      <div class="guide-grid">
+        <div class="guide-card">
+          <span class="card-icon">📘</span>
+          <h3>定位清晰</h3>
+          <p>通过简明路径快速定位所需内容，减少多余跳转，提升效率。</p>
+        </div>
+        <div class="guide-card">
+          <span class="card-icon">🔐</span>
+          <h3>环境提醒</h3>
+          <p>建议在稳定的网络环境中访问，注意页面地址的一致性。</p>
+        </div>
+        <div class="guide-card">
+          <span class="card-icon">📌</span>
+          <h3>信息核实</h3>
+          <p>留意界面与功能模块的实际表现，以页面展示为准。</p>
+        </div>
+        <div class="guide-card">
+          <span class="card-icon">🧩</span>
+          <h3>持续更新</h3>
+          <p>结构与提示内容会不定期调整，以适应当前访问习惯。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区：从访问提醒角度展开 -->
+  <div class="container">
+    <section class="reminder">
+      <h2>访问提醒与基本说明</h2>
+      <p>在准备访问平台之前，了解以下要点可以帮助你更顺畅地使用：</p>
+      <ul>
+        <li><strong>域名核对</strong> – 确认当前使用的地址与官方渠道公布的一致，防止误入镜像或仿冒页面。</li>
+        <li><strong>设备与浏览器</strong> – 推荐使用主流浏览器（如 Chrome、Edge、Safari）并保持更新，避免因兼容性问题导致功能异常。</li>
+        <li><strong>界面语言</strong> – 平台默认显示中文界面，部分区域可能随系统语言自适应，可根据需要手动调整。</li>
+        <li><strong>账户安全</strong> – 在公共设备上访问后及时退出，不保存密码或自动登录选项。</li>
+      </ul>
+      <p style="margin-top: 1.4rem;">
+        这些提醒适用于大多数常见场景，实际体验可能因个人网络环境或设备设置有所不同。
+      </p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section class="faq">
+      <h2>❓ 常见疑问摘要</h2>
+      <div class="faq-item">
+        <span class="question">Q：访问过程中页面加载较慢怎么办？</span>
+        <div class="answer">检查本地网络连接，尝试关闭占用带宽的应用或切换网络环境。部分资源加载受地区网络影响，属于正常现象。</div>
+      </div>
+      <div class="faq-item">
+        <span class="question">Q：页面显示不完全或布局错乱？</span>
+        <div class="answer">尝试清除浏览器缓存，或使用无痕模式重新加载。若问题持续，建议更换浏览器或更新至最新版本。</div>
+      </div>
+      <div class="faq-item">
+        <span class="question">Q：需要注册或登录才能浏览全部内容吗？</span>
+        <div class="answer">部分功能模块可能需要账户支持，公开信息与指南类内容通常可直接查阅。具体以页面实际权限为准。</div>
+      </div>
+      <div class="faq-footnote">
+        更多细节建议直接参考平台内的帮助说明或通知区域。
+      </div>
+    </section>
+
+    <!-- 底部链接 — 自然嵌入句子 -->
+    <div class="footer-links">
+      <p>
+        若需要了解更完整的界面与功能，可以前往 <a href="https://indexs-jinnianhui.com" class="inline-link">金年会</a> 查阅最新页面。
+      </p>
+      <p style="font-size:0.9rem; color:#7a7a92; margin-top: 0.8rem;">
+        本页内容仅作为访问参考，不构成任何承诺或引导。
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
