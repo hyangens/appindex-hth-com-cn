@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料整理 · 澳洲幸运10 信息索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #fafafa;
+            color: #1e1e1e;
+            line-height: 1.8;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+            background: #ffffff;
+            padding: 2.4rem 2rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.02), 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-weight: 500;
+            font-size: 2rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.25rem;
+            color: #111;
+            line-height: 1.3;
+        }
+
+        .subhead {
+            color: #6b6b6b;
+            font-weight: 380;
+            font-size: 1rem;
+            margin-bottom: 2.2rem;
+            border-bottom: 1px solid #ececec;
+            padding-bottom: 1.4rem;
+        }
+
+        h2 {
+            font-weight: 480;
+            font-size: 1.3rem;
+            margin-top: 2.8rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+            color: #222;
+        }
+
+        h3 {
+            font-weight: 440;
+            font-size: 1.1rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.45rem;
+            color: #2d2d2d;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: #3b3b3b;
+        }
+
+        a {
+            color: #1a5e9c;
+            text-decoration: underline;
+            text-decoration-thickness: 0.5px;
+            text-underline-offset: 3px;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #0b3a66;
+            text-decoration-thickness: 1px;
+        }
+
+        /* 亮点卡片 —— 极简留白风格 */
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .highlight-item {
+            flex: 1 1 160px;
+            background: #f8f8f8;
+            padding: 1.2rem 1rem;
+            border-radius: 18px;
+            transition: background 0.2s;
+        }
+
+        .highlight-item:hover {
+            background: #f0f0f0;
+        }
+
+        .highlight-item .icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-item strong {
+            font-weight: 520;
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-item span {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            line-height: 1.45;
+        }
+
+        /* 使用建议列表 */
+        .suggest-list {
+            list-style: none;
+            margin: 1.2rem 0 0.8rem;
+        }
+
+        .suggest-list li {
+            padding: 0.7rem 0 0.7rem 1.8rem;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .suggest-list li:last-child {
+            border-bottom: none;
+        }
+
+        .suggest-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #9a9a9a;
+        }
+
+        .faq-mini {
+            background: #f9f9f9;
+            border-radius: 20px;
+            padding: 1.4rem 1.6rem;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 470;
+            cursor: pointer;
+            padding: 0.25rem 0;
+            color: #1e1e1e;
+        }
+
+        .faq-mini summary::marker {
+            color: #9a9a9a;
+        }
+
+        .faq-mini details p {
+            margin: 0.6rem 0 0 0.8rem;
+            font-size: 0.95rem;
+            color: #4a4a4a;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #6d6d6d;
+            background: #f4f4f4;
+            padding: 1rem 1.4rem;
+            border-radius: 40px;
+            margin-top: 2.4rem;
+            border-left: 2px solid #d6d6d6;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e8e8e8;
+            margin: 2rem 0 0.4rem;
+        }
+
+        .footer-like {
+            margin-top: 2.2rem;
+            font-size: 0.85rem;
+            color: #8a8a8a;
+            text-align: left;
+            border-top: 1px solid #ececec;
+            padding-top: 1.6rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>澳洲幸运10 · 信息索引</h1>
+        <div class="subhead">从一个资料整理的角度，把碎片梳理成可读的脉络</div>
+
+        <p>
+            如果你正在了解或关注所谓的「澳洲幸运10」，大概见过不少零散的信息片段：规则说明、历史数字、分析帖……但把它们拼成一张完整的图，往往要花不少时间。这个页面更像是一份小小的资料索引，帮你把框架搭起来——从基本逻辑到实际使用，再到一些值得留意的细节。以下内容基于公开信息整理，不构成任何建议或引导。
+        </p>
+
+        <!-- 摘要 / 亮点 卡片区 -->
+        <div class="highlights">
+            <div class="highlight-item">
+                <span class="icon">📋</span>
+                <strong>结构清晰</strong>
+                <span>从玩法、数据到注意事项，模块化梳理，方便定位。</span>
+            </div>
+            <div class="highlight-item">
+                <span class="icon">🔍</span>
+                <strong>索引思维</strong>
+                <span>不堆砌术语，重在建立理解路径，而非直接结论。</span>
+            </div>
+            <div class="highlight-item">
+                <span class="icon">⏳</span>
+                <strong>场景务实</strong>
+                <span>考虑普通浏览者、轻度研究者的真实查阅习惯。</span>
+            </div>
+        </div>
+
+        <h2>核心概念与信息骨架</h2>
+        <p>
+            通常所说的「澳洲幸运10」，在信息层面包含几个基础维度：开奖数字的范围（例如1–10）、每个位置的独立性、以及常见的统计角度（冷热、跨度、奇偶等）。资料整理时，建议先从“数字生成机制”入手——任何分析或记录都建立在对基础规则的统一理解上。网络上不少针对 <a href="https://aozhou-lucky10.com">澳洲幸运10</a> 的讨论站或归档页面，都可以作为第一层信息入口，但需要自己过滤和对比。
+        </p>
+
+        <h2>三个值得关注的信息亮点</h2>
+        <p>
+            <strong>1. 数字频率的自然分布</strong> —— 没有人为干预的情况下，每个数字的出现率会逐渐趋近于理论值。很多人花精力做“遗漏统计”，本质上是在观察随机性，而非预测。
+        </p>
+        <p>
+            <strong>2. 组合与路径的多样性</strong> —— 不同于单一数字游戏，位置组合带来了更多样的统计视角，比如前后关联、区域集中度等。这些维度既有趣，也容易过度解读。
+        </p>
+        <p>
+            <strong>3. 历史数据的跨平台差异</strong> —— 不同站点对同一期结果的记录可能存在时间差或格式差异。如果做分析，建议锚定一个数据源，或至少标注来源。这也是为什么像 <a href="https://aozhou-lucky10.com">澳洲幸运10</a> 这类专门页面，可以作为相对集中的参考点。
+        </p>
+
+        <h2>使用建议 · 带着资料意识</h2>
+        <ul class="suggest-list">
+            <li><strong>先看规则，再看数据。</strong> 很多讨论的误解都来自对基础规则的不统一，比如位置是否独立、开奖是否分先后。</li>
+            <li><strong>把统计当作参照，不是依据。</strong> 热号、冷号、均线……都是描述过去，不是预言未来。</li>
+            <li><strong>多源比对，减少盲区。</strong> 同一个数字在不同信息页里可能记录不同，稍微交叉验证就能避免错用。</li>
+            <li><strong>控制信息摄入节奏。</strong> 连续几小时盯数据统计，很容易把随机波动看成“规律”，适得其反。</li>
+        </ul>
+
+        <h2>典型使用场景</h2>
+        <p>
+            <strong>场景一 · 日常查阅：</strong> 打开某个信息页面，快速浏览最近期的数字分布，作为自己笔记的对照。不需要深度分析，只是保持对数字状态的感知。
+        </p>
+        <p>
+            <strong>场景二 · 资料归档：</strong> 收集某段时间的完整结果，整理成电子表格，用于个人回顾或简单的概率验证。这时候最需要的是数据规整、来源清晰。
+        </p>
+        <p>
+            <strong>场景三 · 思路拓展：</strong> 看到其他人对澳洲幸运10的拆分方式（比如分区、和值、路数），借鉴其统计框架，但始终记住：框架只是工具，不是答案。
+        </p>
+
+        <!-- FAQ摘要 折叠式 -->
+        <div class="faq-mini">
+            <h3 style="margin-top:0; font-weight:480;">一些常被问到的点</h3>
+            <details>
+                <summary>这个游戏是不是官方的？</summary>
+                <p>根据公开信息，「澳洲幸运10」最初由澳大利亚相关机构发行，但国内出现的各种名称、平台，往往只是借用概念。具体以当地法律法规为准。</p>
+            </details>
+            <details>
+                <summary>资料中的“遗漏值”是什么意思？</summary>
+                <p>指某个数字连续未出现的期数。属于基础统计指标，但高遗漏不代表“马上要出”，只是历史记录。</p>
+            </details>
+            <details>
+                <summary>为什么不同网站的数据不一样？</summary>
+                <p>更新延迟、期数定义差异、采集时间点不同都可能导致偏差。建议固定一个主要参考源，比如像 <a href="https://aozhou-lucky10.com">澳洲幸运10</a> 这类专门整理页，同时做横向对比。</p>
+            </details>
+        </div>
+
+        <div class="note">
+            ⚡ 信息提醒：本页面仅为资料索引与思路整理，不包含任何操作引导、预测或投注建议。所有数据相关的讨论都应建立在合法、知情、自我负责的前提下。
+        </div>
+
+        <hr>
+        <div class="footer-like">
+            整理与索引 · 关于澳洲幸运10的信息框架 · 内容定期更新，以实际页面为准。
+        </div>
+    </div>
+</body>
+</html>
